@@ -1,12 +1,13 @@
+import EventSearchBanner from '../../Component/EventSearchBanner/EventSearchBanner';
 import NavigationBar from '../../Component/NavigationBar/NavigationBar';
 import './UpcomingEvents.scss';
 
-import React from 'react'
 
 const UpcomingEvents = () => {
   return (
-    <div>
+    <div className='events-page'>
         <NavigationBar/>
+        <EventSearchBanner/>
     </div>
   )
 }

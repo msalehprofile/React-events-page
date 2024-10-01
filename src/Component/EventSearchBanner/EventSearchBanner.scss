@@ -1,0 +1,19 @@
+@use './../../Variables.scss' as *;
+
+.event-search-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $font-color-white;
+
+    &__heading {
+        margin-top: 25px;
+    }
+
+    &__summary {
+        width: 500px;
+        text-align: center;
+        margin: 20px 0 60px;
+    }
+}
