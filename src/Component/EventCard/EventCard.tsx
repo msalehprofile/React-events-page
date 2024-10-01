@@ -22,6 +22,7 @@ const EventCard = ({
   const [formattedStartDate, setFormattedStartDate] = useState<string>("");
   const [formattedStartTime, setFormattedStartTime] = useState<string>("");
   const [showMoreInfo, setShowMoreInfo] = useState<boolean>(false);
+  const [allArtists, setAllArtists] = useState<string>("");
 
   const formatDate = () => {
     const splitDate = startDate.split("T");
@@ -31,6 +32,12 @@ const EventCard = ({
 
     setFormattedStartDate(date + " / " + month + " / " + year);
     setFormattedStartTime(splitDate[1]);
+  };
+
+  const handleArtistList = () => {
+    let artistList = "";
+    artists.forEach((artist) => (artistList = artistList + artist + ", "));
+    setAllArtists(artistList.slice(0, artistList.length - 2));
   };
 
   const handleShowMoreInfo = () => {
@@ -43,6 +50,7 @@ const EventCard = ({
 
   useEffect(() => {
     formatDate();
+    handleArtistList();
   }, []);
 
   return (
@@ -53,7 +61,7 @@ const EventCard = ({
           <h1 className="topline__name">{eventName}</h1>
           <p className="topline__venue">{venue}</p>
           <p className="topline__date">{formattedStartDate}</p>
-          <p className="topline__time">{formattedStartTime}</p>
+          <p className="topline__time">{formattedStartTime.slice(0, 5)}</p>
         </div>
       )}
 
@@ -62,9 +70,7 @@ const EventCard = ({
           <h1 className="details__name">{eventName}</h1>
           <p className="details__desc">{description}</p>
           <h1 className="details__title">Artists:</h1>
-          {artists.map((artist) => (
-            <Button size="medium" color="primary" label={artist} />
-          ))}
+          <p>{allArtists}</p>
         </div>
       )}
 

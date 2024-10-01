@@ -1,7 +1,50 @@
-@use './../../Variables.scss' as *;
+@use "./../../Variables.scss" as *;
 
-.allevents {
+.listed-events-page {
+  &__allevents {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .listed-events-page {
+    &__allevents {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .listed-events-page {
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__allevents {
+      display: grid;
+      width: 95%;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .listed-events-page {
+
+    &__allevents {
+      display: grid;
+      width: 80%;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      place-items: center;
+      margin: 25px 50px;
+    }
+  }
 }
