@@ -1,0 +1,71 @@
+@use './../../Variables.scss' as *;
+
+
+.navigationBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: blue;
+  color: $navigation-menu-font-colour;
+
+  &__hamburger {
+    display: inline-block;
+    cursor: pointer;
+
+    &--bar {
+      width: 30px;
+      height: 2px;
+      background-color: black;
+      margin: 6px 0;
+    }
+  }
+
+  .name-and-pages__brand-name {
+    height: 10vh;
+  }
+
+  .name-and-pages__pages {
+    display: none;
+  }
+
+  &__profile-image {
+    height: 50px; 
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__name-and-pages{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .name-and-pages__pages {
+            display: flex;
+    
+            &--links {
+                padding-left: 30px;
+                font-size: $navigation-menu-font-size;
+                font-weight: $navigation-menu-font-weight;
+            }
+          }
+    }
+
+    .name-and-pages__brand-name {
+        margin: 0 60px 0 80px; 
+      }
+
+    &__profile-image {
+        margin: 0 80px 0 60px; 
+      }
+  }
+}
