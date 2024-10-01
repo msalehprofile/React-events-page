@@ -39,3 +39,58 @@
     position: absolute;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .event-card {
+    height: 70vw;
+    width: 85%;
+
+    &__topline {
+      .topline__image {
+        height: 40vw;
+      }
+    }
+
+    &__buttons {
+      margin-top: 60vw;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .event-card {
+    height: 50vw;
+    width: 80%;
+
+    &__topline {
+      .topline__image {
+        height: 25vw;
+      }
+    }
+
+    &__buttons {
+      margin-top: 45vw;
+    }
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .event-card {
+    height: 35vw;
+    padding: 15px;
+
+    &__buttons {
+      margin-top: 30vw;
+    }
+
+    &__topline {
+      .topline__image {
+        height: 15vw;
+      }
+
+      .topline__time {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 
-import NavigationBar from '../../Component/NavigationBar/NavigationBar';
+
 import AllEvents from '../AllEvents/AllEvents';
 import Navigation from '../Navigation/Navigation';
 import './UpcomingEvents.scss';
