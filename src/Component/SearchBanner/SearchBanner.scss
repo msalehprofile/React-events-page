@@ -1,0 +1,22 @@
+@use "./../../Variables.scss" as *;
+
+.search-banner {
+    display: none;
+}
+
+@media screen and (min-width: 1150px) {
+    .search-banner {
+        display: flex;
+        height: 8vh;
+        justify-content: space-around;
+        align-items: center;
+    
+        &__link{
+            padding: 35px;
+    
+            &:active {
+                background-color: lighten($button-color, 30%);
+            }
+        }
+    }
+  }

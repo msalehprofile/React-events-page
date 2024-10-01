@@ -1,5 +1,9 @@
-@use './../../Variables.scss' as *;
+@use "./../../Variables.scss" as *;
 
 .events-page {
-
+  &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
 }

@@ -5,8 +5,9 @@ import Button from "../Button/Button";
 type EventCardProps = {
   eventName: string;
   venue: string;
-  imageURL: string;
+  imageUrl: string;
   startDate: string;
+  finishDate: string;
   description: string;
   artists: string[];
 };
@@ -14,9 +15,10 @@ type EventCardProps = {
 const EventCard = ({
   eventName,
   venue,
-  imageURL,
+  imageUrl,
   description,
   startDate,
+  finishDate,
   artists,
 }: EventCardProps) => {
   const [formattedStartDate, setFormattedStartDate] = useState<string>("");
@@ -57,11 +59,11 @@ const EventCard = ({
     <div className="event-card">
       {!showMoreInfo && (
         <div className="event-card__topline">
-          <img className="topline__image" src={imageURL} alt="" />
+          <img className="topline__image" src={imageUrl} alt="" />
           <h1 className="topline__name">{eventName}</h1>
-          <p className="topline__venue">{venue}</p>
-          <p className="topline__date">{formattedStartDate}</p>
-          <p className="topline__time">{formattedStartTime.slice(0, 5)}</p>
+          <p className="topline__venue">Where: {venue}</p>
+          <p className="topline__date">Date: {formattedStartDate}</p>
+          <p className="topline__time">Time: {formattedStartTime.slice(0, 5)} - {finishDate.slice(11,16)}</p>
         </div>
       )}
 

@@ -23,8 +23,6 @@
   }
 
   &__details {
-    margin: 10px;
-
     .details__name,
     .details__desc {
       padding-bottom: 10px;
@@ -91,6 +89,26 @@
       .topline__time {
         margin-bottom: 20px;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .event-card {
+    height: 30vw;
+
+    &__buttons {
+      margin-top: 25vw;
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .event-card {
+    height: 27vw;
+
+    &__buttons {
+      margin-top: 24vw;
     }
   }
 }
