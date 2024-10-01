@@ -1,0 +1,10 @@
+@use "./../../Variables.scss" as *;
+
+.searchbar {
+  &__input {
+    width: 300px;
+    padding: 5px;
+    margin: 20px 30px;
+    border-radius: 15px;
+  }
+}

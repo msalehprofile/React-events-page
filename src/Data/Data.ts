@@ -2,11 +2,12 @@ export type EventDataType = {
     id: number;
     eventName: string;
     venue: string;
-    imageURL: string;
+    imageUrl: string;
     startDate: string;
+    finishDate: string;
     description: string;
     artists: string[];
-}
+};
 
 
 export const eventData = [
@@ -17,6 +18,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2024-11-29T19:00:00",
+    finishDate: "2024-11-29T23:00:00",
     description:
       "Experience the ultimate rock concert featuring top bands from around the world.",
     artists: ["The Rolling Stones", "Foo Fighters", "Muse", "Arctic Monkeys"],
@@ -28,6 +30,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2024-12-05T20:30:00",
+    finishDate: "2024-12-05T23:30:00",
     description:
       "Get ready for a night of non-stop laughter with our lineup of hilarious comedians.",
     artists: ["John Mulaney", "Ali Wong", "Dave Chappelle"],
@@ -39,6 +42,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-01-15T18:00:00",
+    finishDate: "2025-01-15T18:00:00",
     description:
       "Immerse yourself in the beautiful melodies of classical masterpieces performed by world-renowned musicians.",
     artists: [
@@ -56,6 +60,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-02-20T09:00:00",
+    finishDate: "2025-02-20T14:00:00",
     description:
       "Discover the latest technological advancements and network with industry leaders at this cutting-edge conference.",
     artists: ["Elon Musk", "Satya Nadella", "Susan Wojcicki", "Jensen Huang"],
@@ -67,6 +72,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-03-10T11:00:00",
+    finishDate: "2025-03-10T19:00:00",
     description:
       "Indulge in a culinary journey featuring exquisite dishes and fine wines from around the globe.",
     artists: [
@@ -84,6 +90,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-04-05T10:00:00",
+    finishDate: "2025-04-05T16:00:00",
     description:
       "Explore thought-provoking artworks from contemporary artists pushing the boundaries of creativity.",
     artists: ["Banksy", "Yayoi Kusama", "Ai Weiwei", "Jeff Koons"],
@@ -95,6 +102,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-05-22T14:00:00",
+    finishDate: "2025-05-22T19:00:00",
     description:
       "Witness the latest trends and designs from top fashion houses in this glamorous runway event.",
     artists: ["Vivienne Westwood", "Alexander McQueen", "Stella McCartney"],
@@ -106,6 +114,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-06-30T15:30:00",
+    finishDate: "2025-06-30T20:30:00",
     description:
       "Cheer for your favorite team in this thrilling championship match that will keep you on the edge of your seat.",
     artists: ["Manchester United", "Liverpool FC", "Chelsea FC", "Arsenal FC"],
@@ -117,6 +126,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-07-18T10:30:00",
+    finishDate: "2025-07-18T17:30:00",
     description:
       "Discover the wonders of our planet and beyond through interactive exhibits and engaging presentations.",
     artists: [
@@ -134,6 +144,7 @@ export const eventData = [
     imageUrl:
       "https://d1plawd8huk6hh.cloudfront.net/assets/default400_1024.png?w=360&h =300&auto=format&fit=crop&crop=faces,entropy&dpr=1",
     startDate: "2025-08-08T12:00:00",
+    finishDate: "2025-08-08T23:30:00",
     description:
       "Enjoy a weekend of fantastic live music performances across multiple stages in a beautiful outdoor setting.",
     artists: ["Adele", "Ed Sheeran", "Coldplay", "Taylor Swift", "BeyoncÃ©"],
