@@ -1,0 +1,46 @@
+@use "./../../Variables.scss" as *;
+
+.button {
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 30px;
+  font-size: 15px;
+
+  &--large {
+    width: 90%;
+    font-size: 18px;
+    margin: 0 15px;
+  }
+
+  &--medium {
+    width: 50%;
+    padding: 7px;
+  }
+
+  &--small {
+    width: 35%;
+    padding: 10px;
+  }
+
+  &--primary {
+    background-color: $font-color-white;
+    border: 1px solid $button-color;
+    color: $button-color;
+
+    &:active {
+      background-color: $button-color;
+      color: $font-color-white;
+    }
+  }
+
+  &--secondary {
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    color: $font-color-white;
+
+    &:active {
+      background-color: $font-color-white;
+      color: $button-color;
+    }
+  }
+}
