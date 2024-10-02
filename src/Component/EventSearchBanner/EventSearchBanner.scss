@@ -12,8 +12,20 @@
     }
 
     &__summary {
-        // width: 500px;
+        width: 300px;
         text-align: center;
-        margin: 20px 0 60px;
+        margin: 20px 10px 60px;
+        background: rgba(47, 47, 47, 0.6);
+        background-blend-mode: lighten;
+    }
+}
+
+@media screen and (min-width: 600px)  {
+    .event-search-banner {
+        &__summary {
+            width: 550px;
+            text-align: center;
+            margin: 20px 10px 60px;
+        }
     }
 }
