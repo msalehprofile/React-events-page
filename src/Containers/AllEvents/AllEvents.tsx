@@ -4,35 +4,34 @@ import EventCard from "../../Component/EventCard/EventCard";
 import { useEffect, useState } from "react";
 
 type AllEventsProps = {
-  searchedArtist: string;
-  searchedEvent: string;
-}
-const AllEvents = ({searchedArtist, searchedEvent}: AllEventsProps) => {
-  const [listedEvents, setListedEvents] = useState<EventDataType[]>([])
+  searchedTerm: string;
+};
+const AllEvents = ({ searchedTerm }: AllEventsProps) => {
+  const [listedEvents, setListedEvents] = useState<EventDataType[]>([]);
 
   const handleEventList = () => {
-    if (searchedEvent =="" && searchedArtist=="") {
-      console.log(eventData)
-      setListedEvents(eventData)
+    if (searchedTerm == "") {
+      console.log(eventData);
+      setListedEvents(eventData);
     }
 
-    if (searchedEvent != "") {
-      const filteredByEvent = listedEvents.filter((event) => event.eventName.toLowerCase().includes(searchedEvent.toLowerCase()))
-      setListedEvents(filteredByEvent)
-      console.log(filteredByEvent)
-     }
-
-     if (searchedArtist != "") {
-      const filteredByEvent = listedEvents.filter((event) => event.artists.some((artist) => artist.toLowerCase().includes(searchedArtist.toLowerCase())))
-      setListedEvents(filteredByEvent)
-      console.log(filteredByEvent)
-     }
-  }
+    if (searchedTerm != "") {
+      const filteredByEvent = listedEvents.filter(
+        (event) =>
+          event.eventName.toLowerCase().includes(searchedTerm.toLowerCase()) ||
+          event.artists.some((artist) =>
+            artist.toLowerCase().includes(searchedTerm.toLowerCase())
+          ) || event.venue.toLowerCase().includes(searchedTerm.toLowerCase()) 
+      );
+      setListedEvents(filteredByEvent);
+      console.log(filteredByEvent);
+    }
+  };
 
   useEffect(() => {
-    handleEventList()
-  },[searchedEvent, searchedArtist])
- 
+    handleEventList();
+  }, [searchedTerm]);
+
   return (
     <>
       <div className="listed-events-page">
