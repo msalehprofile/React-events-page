@@ -61,9 +61,9 @@ const EventCard = ({
         <div className="event-card__topline">
           <img className="topline__image" src={imageUrl} alt="" />
           <h1 className="topline__name">{eventName}</h1>
-          <p className="topline__venue">Where: {venue}</p>
-          <p className="topline__date">Date: {formattedStartDate}</p>
-          <p className="topline__time">Time: {formattedStartTime.slice(0, 5)} - {finishDate.slice(11,16)}</p>
+          <p className="topline__detail"><span className="topline__detail--bold">Where: </span>{venue}</p>
+          <p className="topline__detail"><span className="topline__detail--bold">Date:  </span>{formattedStartDate}</p>
+          <p className="topline__detail"><span className="topline__detail--bold">Time:  </span> {formattedStartTime.slice(0, 5)} - {finishDate.slice(11,16)}</p>
         </div>
       )}
 

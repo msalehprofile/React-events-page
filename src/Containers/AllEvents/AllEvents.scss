@@ -21,7 +21,6 @@
 
 @media screen and (min-width: 900px) {
   .listed-events-page {
-    background-color: green;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +36,6 @@
 
 @media screen and (min-width: 1150px) {
   .listed-events-page {
-
     &__allevents {
       display: grid;
       width: 80%;

@@ -1,15 +1,15 @@
 @use "./../../Variables.scss" as *;
 
 .event-card {
-  border: 1px solid black;
   border-radius: 10px;
   width: 90vw;
-  height: 480px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px 0px;
   padding: 10px;
+  background-color: $card-color;
 
   &__topline {
     .topline__image {
@@ -17,24 +17,47 @@
     }
 
     .topline__name {
-      font-size: 25px;
+      font-size: 20px;
       margin: 5px 0;
+    }
+
+    .topline__detail {
+      &--bold {
+        font-weight: bold;
+      }
     }
   }
 
   &__details {
-    .details__name,
+    padding: 10px;
+    .details__name {
+      font-size: 25px;
+      padding-bottom: 10px;
+    }
+
     .details__desc {
+      padding-bottom: 20px;
+      font-size: $card-font-size;
+    }
+
+    .details__title {
+      font-size: 20px;
       padding-bottom: 10px;
     }
   }
 
   &__buttons {
     display: flex;
-    margin-top: 420px;
+    margin-top: 430px;
     align-items: center;
     justify-content: space-between;
     position: absolute;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .event-card {
+    width: 70%;
   }
 }
 
@@ -57,7 +80,7 @@
 
 @media screen and (min-width: 900px) {
   .event-card {
-    height: 50vw;
+    height: 45vw;
     width: 80%;
 
     &__topline {
@@ -67,7 +90,7 @@
     }
 
     &__buttons {
-      margin-top: 45vw;
+      margin-top: 40vw;
     }
   }
 }
@@ -95,20 +118,20 @@
 
 @media screen and (min-width: 1350px) {
   .event-card {
-    height: 30vw;
+    height: 33vw;
 
     &__buttons {
-      margin-top: 25vw;
+      margin-top: 28vw;
     }
   }
 }
 
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 1550px) {
   .event-card {
-    height: 27vw;
+    height: 30vw;
 
     &__buttons {
-      margin-top: 24vw;
+      margin-top: 26vw;
     }
   }
 }
