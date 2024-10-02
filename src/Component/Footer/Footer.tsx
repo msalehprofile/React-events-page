@@ -68,7 +68,7 @@ const Footer = () => {
         <img className="footer__social-media--links" src="src/assets/social-media-logos/spotify-white-icon.webp" alt="Spotify logo" />
         <img className="footer__social-media--links" src="src/assets/social-media-logos/mixcloud-logo.png" alt="Mixcloud logo" />
         <img className="footer__social-media--links" src="src/assets/social-media-logos/instagram-logo.png" alt="Instagram logo" />
-        <img className="footer__social-media--links" src="src/assets/social-media-logos/facebook-logo.webp" alt="Facebook logo" />
+        <img className="footer__social-media--links" src="src/assets/social-media-logos/facebook-logo.jpeg" alt="Facebook logo" />
       </div>
 
       <div className="footer__page-split"></div>
