@@ -8,8 +8,7 @@ import MobileNavigation from "../../Component/MobileNavigation/MobileNavigation"
 import Footer from "../../Component/Footer/Footer";
 
 const UpcomingEvents = () => {
-  const [searchedEvent, setsearchedEvent] = useState<string>("");
-  const [searchedArtist, setSearchedArtist] = useState<string>("");
+  const [searchedTerm, setsearchedTerm] = useState<string>("");
   const [navigationMenuView, setNavigationMenuView] = useState<boolean>(false)
   
   const handleNavMenuDisplay = () => {
@@ -20,19 +19,11 @@ const UpcomingEvents = () => {
     setNavigationMenuView(false)
   }
 
-  const handleSearchByName = (event: FormEvent<HTMLInputElement>) => {
+  const handleSearchCriteria = (event: FormEvent<HTMLInputElement>) => {
     const cleanedInput = event.currentTarget.value.trim().toLowerCase();
-    setsearchedEvent(cleanedInput);
+    setsearchedTerm(cleanedInput);
     console.log(cleanedInput);
   };
-
-  const handleSearchByArtist = (event: FormEvent<HTMLInputElement>) => {
-    const cleanedInput = event.currentTarget.value.trim().toLowerCase();
-    setSearchedArtist(cleanedInput);
-    console.log(cleanedInput);
-  };
-
-
 
   return (
     <div className="events-page">
@@ -41,20 +32,14 @@ const UpcomingEvents = () => {
       <SearchBanner />
       <div className="events-page__search">
         <SearchBar
-          searchTerm={searchedEvent}
-          handleSearchCriteria={handleSearchByName}
-          placeholder="Search by event name"
+          searchTerm={searchedTerm}
+          handleSearchCriteria={handleSearchCriteria}
+          placeholder="Search by event name, location or artist"
         />
 
-        <SearchBar
-          searchTerm={searchedArtist}
-          handleSearchCriteria={handleSearchByArtist}
-          placeholder="Search by artist"
-        />
       </div>
       <AllEvents
-        searchedEvent={searchedEvent}
-        searchedArtist={searchedArtist}
+        searchedTerm={searchedTerm}
       />
       <Footer/>
     </div>
