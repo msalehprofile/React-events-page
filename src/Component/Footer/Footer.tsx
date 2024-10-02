@@ -1,12 +1,18 @@
 import "./Footer.scss";
-import facebook from '../../assets/social-media-logos/facebook-logo.jpeg'
+import facebook from '../../assets/social-media-logos/facebook-logo.jpeg';
+import instagram from '../../assets/social-media-logos/instagram-logo.png';
+import mixcloud from '../../assets/social-media-logos/mixcloud-logo.png';
+import spotify from '../../assets/social-media-logos/spotify-white-icon.png';
+import twitter from '../../assets/social-media-logos/twitter-logo.png';
+import skiddleLogo from '../../assets/skiddle-logo-footer.png'
+
 
 const Footer = () => {
   return (
     <div className="footer">
       <img
         className="footer__logo"
-        src="src/assets/skiddle-logo-footer.png"
+        src={skiddleLogo}
         alt=""
       />
       <div className="footer__events">
@@ -65,10 +71,10 @@ const Footer = () => {
       </div>
 
       <div className="footer__social-media">
-        <img className="footer__social-media--links" src="src/assets/social-media-logos/twitter-logo.png" alt="twitter logo" />
-        <img className="footer__social-media--links" src="src/assets/social-media-logos/spotify-white-icon.webp" alt="Spotify logo" />
-        <img className="footer__social-media--links" src="src/assets/social-media-logos/mixcloud-logo.png" alt="Mixcloud logo" />
-        <img className="footer__social-media--links" src="src/assets/social-media-logos/instagram-logo.png" alt="Instagram logo" />
+        <img className="footer__social-media--links" src={twitter} alt="twitter logo" />
+        <img className="footer__social-media--links" src={spotify} alt="Spotify logo" />
+        <img className="footer__social-media--links" src={mixcloud} alt="Mixcloud logo" />
+        <img className="footer__social-media--links" src={instagram} alt="Instagram logo" />
         <img className="footer__social-media--links" src={facebook} alt="Facebook logo" />
       </div>
 

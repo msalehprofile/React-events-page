@@ -1,4 +1,5 @@
 import "./NavigationBar.scss";
+import skiddleLogo from '../../assets/Skiddle-logo.png'
 
 type NavigationBarProps = {
   handleNavMenuDisplay: () => void;
@@ -15,7 +16,7 @@ const NavigationBar = ({handleNavMenuDisplay}:NavigationBarProps) => {
         <div className="navigationBar__hamburger--bar"></div>
       </div>
       <div className="navigationBar__name-and-pages">
-        <img className="name-and-pages__brand-name" src="src/assets/Skiddle-logo.png" alt="skiddle" />
+        <img className="name-and-pages__brand-name" src={skiddleLogo} alt="skiddle" />
         <div className="name-and-pages__pages">
           <h1 className="name-and-pages__pages--links">Gigs</h1>
           <h1 className="name-and-pages__pages--links">Clubs</h1>
