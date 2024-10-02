@@ -23,23 +23,23 @@
 
   &--primary {
     background-color: $font-color-white;
-    border: 1px solid $button-color;
-    color: $button-color;
+    border: 1px solid $brand-color;
+    color: $brand-color;
 
     &:active {
-      background-color: $button-color;
+      background-color: $brand-color;
       color: $font-color-white;
     }
   }
 
   &--secondary {
-    background-color: $button-color;
-    border: 1px solid $button-color;
+    background-color: $brand-color;
+    border: 1px solid $brand-color;
     color: $font-color-white;
 
     &:active {
       background-color: $font-color-white;
-      color: $button-color;
+      color: $brand-color;
     }
   }
 }
