@@ -3,7 +3,18 @@
 .events-page {
   &__search {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   } 
+}
+
+@media screen and (min-width: 750px){
+  .events-page {
+    &__search {
+
+      flex-direction: row;
+
+    } 
+  }
 }
