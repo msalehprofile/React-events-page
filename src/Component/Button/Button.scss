@@ -11,16 +11,6 @@
     margin: 0 15px;
   }
 
-  &--medium {
-    width: 80%;
-    padding: 7px;
-  }
-
-  &--small {
-    width: 35%;
-    padding: 10px;
-  }
-
   &--primary {
     background-color: $font-color-white;
     border: 1px solid $brand-color;
@@ -48,7 +38,6 @@
   .button {
     &--large {
       font-size: 16px;
-      margin: 0 5px;
       padding: 10px;
     }
   }

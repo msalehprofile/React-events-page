@@ -2,7 +2,7 @@
 
 .mobile-navigation {
     background-color: $grey-color;
-    width: 40vw;
+    width: 60vw;
     top: 0;
     position: fixed;
     border-radius: 10px;
@@ -20,7 +20,7 @@
     &__links {
         padding: 20px;
         font-size: 24px;
-        width: 20vw;
+        width: 40vw;
 
         &:active {
             background-color: lighten($grey-color, 10%);
@@ -45,4 +45,14 @@
             transform: rotate(-45deg);
           }
       }
+}
+
+@media screen and (min-width: 700px) {
+    .mobile-navigation {
+        width: 40vw;
+
+        &__links {
+            width: 20vw;
+        }
+    }    
 }

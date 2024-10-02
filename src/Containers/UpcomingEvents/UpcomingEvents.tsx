@@ -22,7 +22,6 @@ const UpcomingEvents = () => {
   const handleSearchCriteria = (event: FormEvent<HTMLInputElement>) => {
     const cleanedInput = event.currentTarget.value.trim().toLowerCase();
     setsearchedTerm(cleanedInput);
-    console.log(cleanedInput);
   };
 
   return (

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./NavigationBar.scss";
 
 type NavigationBarProps = {

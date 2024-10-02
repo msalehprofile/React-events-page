@@ -11,7 +11,6 @@ const AllEvents = ({ searchedTerm }: AllEventsProps) => {
 
   const handleEventList = () => {
     if (searchedTerm == "") {
-      console.log(eventData);
       setListedEvents(eventData);
     }
 
@@ -24,7 +23,6 @@ const AllEvents = ({ searchedTerm }: AllEventsProps) => {
           ) || event.venue.toLowerCase().includes(searchedTerm.toLowerCase()) 
       );
       setListedEvents(filteredByEvent);
-      console.log(filteredByEvent);
     }
   };
 
