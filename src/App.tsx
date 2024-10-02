@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import UpcomingEvents from "./Containers/UpcomingEvents/UpcomingEvents";
 import './App.scss';
 
