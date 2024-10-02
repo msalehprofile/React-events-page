@@ -8,3 +8,6 @@ $navigation-menu-font-weight: 100;
 
 $font-color-white: white;
 $button-color: rgb(50, 105, 100);
+$card-color: lighten($button-color, 50%);
+
+$card-font-size: 18px;
