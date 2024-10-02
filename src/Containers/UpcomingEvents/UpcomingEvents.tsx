@@ -5,6 +5,7 @@ import Navigation from "../Navigation/Navigation";
 import "./UpcomingEvents.scss";
 import SearchBar from "../../Component/SearchBar/SearchBar";
 import MobileNavigation from "../../Component/MobileNavigation/MobileNavigation";
+import Footer from "../../Component/Footer/Footer";
 
 const UpcomingEvents = () => {
   const [searchedEvent, setsearchedEvent] = useState<string>("");
@@ -55,6 +56,7 @@ const UpcomingEvents = () => {
         searchedEvent={searchedEvent}
         searchedArtist={searchedArtist}
       />
+      <Footer/>
     </div>
   );
 };

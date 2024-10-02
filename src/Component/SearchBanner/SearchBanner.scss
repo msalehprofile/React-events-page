@@ -15,7 +15,7 @@
             padding: 30px;
     
             &:active {
-                background-color: lighten($button-color, 30%);
+                background-color: lighten($brand-color, 30%);
             }
         }
     }
