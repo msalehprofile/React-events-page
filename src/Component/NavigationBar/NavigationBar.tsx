@@ -1,5 +1,6 @@
 import "./NavigationBar.scss";
 import skiddleLogo from '../../assets/Skiddle-logo.png'
+import profileImage from '../../assets/Stand-in-profile-image.png'
 
 type NavigationBarProps = {
   handleNavMenuDisplay: () => void;
@@ -28,7 +29,7 @@ const NavigationBar = ({handleNavMenuDisplay}:NavigationBarProps) => {
       </div>
       <img
         className="navigationBar__profile-image"
-        src="src/assets/Stand-in-profile-image.png"
+        src={profileImage}
         alt="Profile Image"
       />
     </div>
