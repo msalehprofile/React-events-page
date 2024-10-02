@@ -1,9 +1,16 @@
+import { useState } from "react";
 import "./NavigationBar.scss";
 
-const NavigationBar = () => {
+type NavigationBarProps = {
+  handleNavMenuDisplay: () => void;
+
+}
+
+const NavigationBar = ({handleNavMenuDisplay}:NavigationBarProps) => {
+
   return (
     <div className="navigationBar">
-      <div className="navigationBar__hamburger">
+      <div onClick={handleNavMenuDisplay}className="navigationBar__hamburger">
         <div className="navigationBar__hamburger--bar"></div>
         <div className="navigationBar__hamburger--bar"></div>
         <div className="navigationBar__hamburger--bar"></div>

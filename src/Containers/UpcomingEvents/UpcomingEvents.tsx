@@ -4,10 +4,20 @@ import AllEvents from "../AllEvents/AllEvents";
 import Navigation from "../Navigation/Navigation";
 import "./UpcomingEvents.scss";
 import SearchBar from "../../Component/SearchBar/SearchBar";
+import MobileNavigation from "../../Component/MobileNavigation/MobileNavigation";
 
 const UpcomingEvents = () => {
   const [searchedEvent, setsearchedEvent] = useState<string>("");
   const [searchedArtist, setSearchedArtist] = useState<string>("");
+  const [navigationMenuView, setNavigationMenuView] = useState<boolean>(false)
+  
+  const handleNavMenuDisplay = () => {
+    setNavigationMenuView(true)
+  }
+
+  const handleNavHideMenuDisplay = () => {
+    setNavigationMenuView(false)
+  }
 
   const handleSearchByName = (event: FormEvent<HTMLInputElement>) => {
     const cleanedInput = event.currentTarget.value.trim().toLowerCase();
@@ -21,9 +31,12 @@ const UpcomingEvents = () => {
     console.log(cleanedInput);
   };
 
+
+
   return (
     <div className="events-page">
-      <Navigation />
+      <Navigation handleNavMenuDisplay={handleNavMenuDisplay}/>
+      {navigationMenuView && <MobileNavigation handleNavHideMenuDisplay={handleNavHideMenuDisplay}/>}
       <SearchBanner />
       <div className="events-page__search">
         <SearchBar

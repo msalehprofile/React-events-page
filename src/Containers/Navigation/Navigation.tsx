@@ -2,11 +2,13 @@ import EventSearchBanner from '../../Component/EventSearchBanner/EventSearchBann
 import NavigationBar from '../../Component/NavigationBar/NavigationBar';
 import './Navigation.scss';
 
-
-const Navigation = () => {
+type NavigationProps = {
+  handleNavMenuDisplay: () => void;
+}
+const Navigation = ({handleNavMenuDisplay}: NavigationProps) => {
   return (
     <div className='navigation'>
-        <NavigationBar/>
+        <NavigationBar handleNavMenuDisplay={handleNavMenuDisplay}/>
         <EventSearchBanner/>
     </div>
   )
