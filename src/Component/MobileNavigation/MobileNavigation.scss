@@ -1,0 +1,48 @@
+@use "./../../Variables.scss" as *;
+
+.mobile-navigation {
+    background-color: $grey-color;
+    width: 40vw;
+    top: 0;
+    position: fixed;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 40px 0px 30px 40px;
+    display: flex;
+    flex-direction: column;
+    color: $font-color-white;
+
+    &__title {
+        padding: 20px 20px 10px;
+        font-size: 30px;
+    }
+
+    &__links {
+        padding: 20px;
+        font-size: 24px;
+        width: 20vw;
+
+        &:active {
+            background-color: lighten($grey-color, 10%);
+        }
+    }
+
+    &__hamburger {
+        display: inline-block;
+        cursor: pointer;
+        margin: 20px 20px 20px 20px;
+    
+        &--bar1 {
+          width: 30px;
+          height: 2px;
+          background-color: $font-color-white;
+          transform: rotate(45deg);
+        }
+        &--bar2 {
+            width: 30px;
+            height: 2px;
+            background-color: $font-color-white;
+            transform: rotate(-45deg);
+          }
+      }
+}
