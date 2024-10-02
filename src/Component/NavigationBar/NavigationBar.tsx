@@ -1,5 +1,5 @@
 import "./NavigationBar.scss";
-import skiddleLogo from '../../assets/Skiddle-logo.png'
+import skiddleLogo from '../../assets/skiddle-logo.png'
 import profileImage from '../../assets/Stand-in-profile-image.png'
 
 type NavigationBarProps = {
