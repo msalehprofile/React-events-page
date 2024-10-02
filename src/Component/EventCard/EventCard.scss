@@ -63,7 +63,7 @@
 
 @media screen and (min-width: 600px) {
   .event-card {
-    height: 70vw;
+    height: 75vw;
     width: 85%;
 
     &__topline {
@@ -73,8 +73,14 @@
     }
 
     &__buttons {
-      margin-top: 60vw;
+      margin-top: 65vw;
     }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .event-card {
+    height: 70vw;
   }
 }
 
